@@ -5,19 +5,23 @@ function ForecastSummary(props) {
         date,
         description,
         icon,
-        temperature
+        temperatureMin,
+        temperatureMax
     } = props;
 
   return (
-    <div class="forecast-summary">
+    <div className="forecast-summary">
         <div className='forecast-summary__date'>
             {date}
         </div>
         <div className='forecast-summary__icon'>
             {icon}
         </div>
-        <div className='forecast-summary__temperature'>
-            {temperature}
+        <div className='forecast-summary__temperatureMin'>
+            {temperatureMin}
+        </div>
+        <div className='forecast-summary__temperatureMax'>
+            {temperatureMax}
         </div>
         <div className='forecast-summary__description'>
             {description}
