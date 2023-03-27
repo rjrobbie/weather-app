@@ -1,17 +1,15 @@
 import "../styles/App.css";
 import React from "react";
 import LocationDetails from "./LocationDetails";
+import ForecastSummaries from "./ForecastSummaries";
 
-
-function App({ location }) {
-  const { city, country } = location;
+function App ({forecasts, location}) {
   return (
-      <LocationDetails
-       city={city} country={country} 
-       />
+    <div className="App">
+      <LocationDetails city={location.city} country={location.country} />
+      <ForecastSummaries forecasts={forecasts} />
+    </div>
   );
-}
-
-
+};
 
 export default App;
